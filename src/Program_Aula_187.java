@@ -28,8 +28,9 @@ public class Program_Aula_187 {
 			System.out.println(file.getPath());
 		}
 		
-		//boolean success = new File(strPath + "\\Nova Pasta de Teste").mkdir();
-		//System.out.println("Pasta criada com sucesso? (true/false): " + success);
+		boolean success = new File(strPath + "\\Nova Pasta de Teste").mkdir(); // serve para criar uma nova pasta 
+		// no diretorio indicado anteriormente...  o boolean é apenas para dizer se foi criado ou não, a partir do true/false
+		System.out.println("Pasta criada com sucesso? (true/false): " + success);
 		
 		sc.close();
 	}

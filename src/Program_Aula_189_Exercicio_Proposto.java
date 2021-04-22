@@ -31,6 +31,8 @@ public class Program_Aula_189_Exercicio_Proposto {
 		String strPath = sc.nextLine();
 		File file = new File(strPath);
 		
+		String newPathCaminho = file.getParent();
+		
 		try(BufferedReader br = new BufferedReader(new FileReader(file))){
 			
 			String line = br.readLine();
@@ -54,9 +56,9 @@ public class Program_Aula_189_Exercicio_Proposto {
 			System.out.println("Ocorreu um erro: " + e.getMessage());
 		}
 		
-		new File("C:\\Aula_189\\out").mkdir(); // criando nova pasta
+		new File(newPathCaminho + "\\out").mkdir(); // criando nova pasta
 		
-		String newFile = "C:\\Aula_189\\out\\summary.txt"; //criando novo arquivo
+		String newFile = newPathCaminho + "\\out\\summary.csv"; //criando novo arquivo
 		
 		try(BufferedWriter bw = new BufferedWriter(new FileWriter(newFile,true))){
 			
@@ -72,9 +74,7 @@ public class Program_Aula_189_Exercicio_Proposto {
 		catch(IOException e) {
 			System.out.println("Ocorreu um erro no 2° try(): " + e.getMessage());
 		}
-		
 		sc.close();
-		
 		System.out.println("Fim!");
 	}
 

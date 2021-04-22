@@ -6,7 +6,7 @@ public class Program_Aula_186 {
 
 	public static void main(String[] args) {
 		
-		String[] lines = new String[] {"Good Morning", "Good Afternoon", "Good nigth"};	
+		String[] lines = new String[] {"Good Morning", "Good Teste", "Good nigth"};	
 		
 		String path = "C:\\Drivers PC\\out.txt";
 		
